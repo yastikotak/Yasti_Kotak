@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="520" viewBox="0 0 400 520">
+  <rect width="400" height="520" fill="#ffffff"/>
+  <rect x="0" y="0" width="400" height="520" fill="#fff5f0"/>
+  <circle cx="200" cy="200" r="72" fill="#ffd4c4" opacity="0.9"/>
+  <ellipse cx="200" cy="420" rx="120" ry="140" fill="#ffd4c4" opacity="0.5"/>
+  <text x="200" y="215" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#8b7355">Your portrait</text>
+</svg>
