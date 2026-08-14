@@ -5,6 +5,7 @@ import { Download } from 'lucide-react';
 import RotatingText from './components/RotatingText';
 import MagicBento from './components/MagicBento';
 import TiltedCard from './components/TiltedCard';
+import Galaxy from './components/Galaxy';
 
 function HeroBrush() {
   return (
@@ -154,16 +155,24 @@ export function LandingView({ onNavigatePage, onScrollTo }) {
         </p>
       </section>
 
-      <section className="landing-section" id="l-gallery">
-        <div className="landing-section__head">
+      <section className="landing-section gallery-section" id="l-gallery" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="gallery-galaxy-container" style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: 0.4, pointerEvents: 'none' }}>
+          <Galaxy 
+            density={0.8}
+            glowIntensity={0.2}
+            twinkleIntensity={0.5}
+            starSpeed={0.3}
+          />
+        </div>
+        <div className="landing-section__head" style={{ position: 'relative', zIndex: 1 }}>
           <h2>Gallery</h2>
           <p className="landing-section__sub">Events, leadership, and concepts — mapped out magically.</p>
         </div>
-        <div style={{ marginTop: '28px' }}>
+        <div style={{ marginTop: '28px', position: 'relative', zIndex: 1 }}>
           <MagicBento 
             items={bentoItems}
             textAutoHide={true}
-            enableStars={true}
+            enableStars={false}
             enableSpotlight={true}
             enableBorderGlow={true}
             enableTilt={true}

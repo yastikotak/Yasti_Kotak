@@ -57,7 +57,7 @@ const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
     background: rgba(${color}, 1);
     box-shadow: 0 0 6px rgba(${color}, 0.6);
     pointer-events: none;
-    z-index: 100;
+    z-index: 0;
     left: ${x}px;
     top: ${y}px;
   `;
@@ -514,8 +514,8 @@ const MagicBento = ({
           const cardContent = (
             <>
               {card.image && (
-                <div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: 0.5, borderRadius: '20px', overflow: 'hidden' }}>
-                    <img src={card.image} alt={card.title || 'Image'} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: 1, borderRadius: '20px', overflow: 'hidden' }}>
+                    <img src={card.image} alt={card.title || 'Image'} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.8)' }} />
                 </div>
               )}
               <div className="magic-bento-card__header">

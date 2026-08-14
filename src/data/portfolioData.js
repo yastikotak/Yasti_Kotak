@@ -106,7 +106,8 @@ export const portfolioData = {
     { id: "projects", label: "My Work" },
     { id: "contact", label: "Contact" },
     { id: "about", label: "About Me" },
-    { id: "events", label: "Experience" },
+    { id: "events", label: "Track Record" },
+    { id: "resume", label: "Resume" },
   ],
 
   highlights: {
@@ -175,24 +176,62 @@ export const portfolioData = {
     title: "Projects",
     items: [
       {
-        id: 1,
-        title: "Dynamic Traffic and Safety Management System",
+        id: 6,
+        title: "Retail Customer Intelligence Dashboard",
         cardBlurb:
-          "Computer vision and routing intelligence for safer roads and smarter traffic flow.",
-        problem: "Urban traffic congestion and poor road safety monitoring need a real-time, adaptive solution.",
-        solution: "Built a video-intelligence system that dynamically adjusts traffic signal timings and detects violations.",
+          "End-to-end Retail Customer Intelligence Dashboard using PostgreSQL, SQL, and Power BI.",
+        problem: "Retail businesses have vast transactional databases but struggle to extract actionable insights about customer behavior, churn risks, product affinity, and regional revenue distribution.",
+        solution: "Built a star-schema data model, created analytical SQL views, performed RFM customer segmentation, churn analysis, revenue analytics, product performance analysis, and country-wise sales analysis to generate actionable business insights through five interactive dashboards.",
         outcomes: [
-          "Reduced manual traffic monitoring effort with automated detection.",
-          "Improved response clarity by surfacing violations in real time.",
-          "Enabled safer route suggestions using integrated risk signals."
+          "Identified high-value customer segments for targeted retention strategies.",
+          "Analyzed seasonal revenue trends and top-performing products.",
+          "Highlighted customer churn risks using RFM analysis.",
+          "Evaluated geographic sales performance to identify market expansion opportunities.",
+          "Demonstrated end-to-end Business Intelligence workflow from raw retail data to executive dashboards."
         ],
-        techStack: ["Python", "YOLOv8", "DeepSort", "EasyOCR", "Flask", "FastAPI"],
-        uniqueFeature: "Includes women safety route finder using crime data with nearby police station mapping.",
-        githubUrl: "#",
-        liveUrl: "#",
+        techStack: ["Power BI", "PostgreSQL", "SQL", "DAX", "Business Intelligence", "Data Analytics", "RFM Segmentation"],
+        uniqueFeature: "Implements automated RFM customer segmentation and churn prediction directly in SQL views.",
+        features: [
+          "Designed a star-schema data warehouse for retail analytics.",
+          "Built reusable SQL views for executive KPIs, revenue trends, customer lifetime value, product analysis, and country analysis.",
+          "Implemented RFM segmentation to classify customers into Champions, Loyal Customers, Potential Loyalists, At Risk, and Others.",
+          "Developed five interactive Power BI dashboards: Executive Overview, Customer Intelligence, Revenue & Sales Analysis, Customer Churn Analysis, Country Performance.",
+          "Added business insights and recommendations to each dashboard for better decision-making."
+        ],
+        insights: [
+          "Champions and Loyal Customers account for over 60% of total revenue; targeted loyalty campaigns can maximize LTV.",
+          "Product affinity analysis revealed strong cross-selling potential between top-performing electronics and home accessories.",
+          "Seasonal spikes in Q4 require optimized inventory planning and customized promotional campaigns.",
+          "Customers in the 'At Risk' segment show a 30% increase in churn probability; proactive outreach offers are recommended."
+        ],
+        pipeline: "Created custom SQL views inside PostgreSQL to automate ETL tasks, pre-calculate Customer Lifetime Value (CLV), compute moving averages of sales revenue, and dynamically segment customers based on Recency, Frequency, and Monetary parameters.",
+        githubUrl: "https://github.com/yastikotak/Retail-Customer-Intelligence-Dashboard",
+        liveUrl: "https://github.com/yastikotak/Retail-Customer-Intelligence-Dashboard",
         images: [
-          "/images/projects/traffic_project.png"
+          "/images/projects/retail_exec_overview.png",
+          "/images/projects/retail_cust_intelligence.png",
+          "/images/projects/retail_revenue_sales.png",
+          "/images/projects/retail_churn_analysis.png",
+          "/images/projects/retail_country_perf.png"
         ]
+      },
+      {
+        id: 4,
+        title: "LeadLink CRM",
+        cardBlurb:
+          "A lead pipeline workspace that keeps sales follow-ups organized and timely.",
+        problem: "Early-stage teams struggle to track leads consistently across calls, forms, and campaigns.",
+        solution: "Built a CRM flow with lead stages, reminders, and centralized notes to improve follow-through.",
+        outcomes: [
+          "Improved lead follow-up consistency through structured stage tracking.",
+          "Reduced missed outreach using reminder-based workflows.",
+          "Created clearer visibility of sales pipeline health."
+        ],
+        techStack: ["React", "Node.js", "Express.js", "MongoDB"],
+        uniqueFeature: "Smart follow-up prioritization based on stage, recency, and interaction history.",
+        githubUrl: "#",
+        liveUrl: "https://leadlink-app.onrender.com/",
+        images: ["/images/projects/traffic_project.png"]
       },
       {
         id: 2,
@@ -235,22 +274,24 @@ export const portfolioData = {
         ]
       },
       {
-        id: 4,
-        title: "LeadLink CRM",
+        id: 1,
+        title: "Dynamic Traffic and Safety Management System",
         cardBlurb:
-          "A lead pipeline workspace that keeps sales follow-ups organized and timely.",
-        problem: "Early-stage teams struggle to track leads consistently across calls, forms, and campaigns.",
-        solution: "Built a CRM flow with lead stages, reminders, and centralized notes to improve follow-through.",
+          "Computer vision and routing intelligence for safer roads and smarter traffic flow.",
+        problem: "Urban traffic congestion and poor road safety monitoring need a real-time, adaptive solution.",
+        solution: "Built a video-intelligence system that dynamically adjusts traffic signal timings and detects violations.",
         outcomes: [
-          "Improved lead follow-up consistency through structured stage tracking.",
-          "Reduced missed outreach using reminder-based workflows.",
-          "Created clearer visibility of sales pipeline health."
+          "Reduced manual traffic monitoring effort with automated detection.",
+          "Improved response clarity by surfacing violations in real time.",
+          "Enabled safer route suggestions using integrated risk signals."
         ],
-        techStack: ["React", "Node.js", "Express.js", "MongoDB"],
-        uniqueFeature: "Smart follow-up prioritization based on stage, recency, and interaction history.",
+        techStack: ["Python", "YOLOv8", "DeepSort", "EasyOCR", "Flask", "FastAPI"],
+        uniqueFeature: "Includes women safety route finder using crime data with nearby police station mapping.",
         githubUrl: "#",
         liveUrl: "#",
-        images: ["/images/projects/traffic_project.png"]
+        images: [
+          "/images/projects/traffic_project.png"
+        ]
       },
       {
         id: 5,
@@ -284,7 +325,7 @@ export const portfolioData = {
       institution: "Sanskartirth Gyanpeeth",
       year: "2023",
       degree: "12th Standard",
-      score: "85%",
+      score: "80%",
     },
     {
       institution: "METAS of Seventh-day Adventist School",
@@ -295,41 +336,74 @@ export const portfolioData = {
   ],
 
   events: {
-    title: "Leadership & Events",
-    roleTitle: "Events Team Head",
-    roles: [
+    title: "Track Record",
+    skills: [
+      { name: "Python", icon: Terminal },
+      { name: "React", icon: Code },
+      { name: "Node.js", icon: Wrench },
+      { name: "SQL", icon: Database },
+      { name: "Data Analysis", icon: Search },
+      { name: "Business Intelligence", icon: Database },
+      { name: "Communication", icon: Users },
+      { name: "Leadership", icon: Award }
+    ],
+    achievements: [
       {
-        title: "EMCEE Team Member",
-        organization: "Center for Performing Arts, DSCE",
-        date: "2023 - Present",
-        icon: Users,
-        tasks: [
-          "Hosted and managed flow for multiple college events.",
-          "Improved audience engagement and stage communication under live conditions."
-        ]
+        title: "SDG Innovators",
+        icon: Trophy,
+        detail: "Recognized for building solution-driven ideas aligned with sustainable development goals."
       },
       {
-        title: "Events Team Head",
-        organization: "Udbhava Club, CSBS, DSCE",
-        date: "2024 - Present",
-        icon: Users,
-        tasks: [
-          "Leading planning, coordination, and execution of technical and non-technical events.",
-          "Managing teams, timelines, and cross-functional collaboration for smooth event delivery."
-        ]
+        title: "Comeback Challenge",
+        icon: Zap,
+        detail: "Delivered a resilient comeback performance under pressure in a competitive challenge environment."
+      },
+      {
+        title: "Poster Presentation",
+        icon: ScrollText,
+        detail: "Presented technical work with clear storytelling, structured visuals, and audience interaction."
       }
     ],
-    images: [
-      "/images/events/event-1.jpg",
-      "/images/events/event-2.jpg",
-      "/images/events/event-3.jpg"
+    certifications: [
+      {
+        title: "DBMS",
+        issuer: "NPTEL",
+        image: "/images/certificates/dbms-nptel.png"
+      },
+      {
+        title: "Python Libraries",
+        issuer: "Giga Skills",
+        image: "/images/certificates/python-libraries-gigaskills.png"
+      },
+      {
+        title: "DSA",
+        issuer: "Apna College",
+        image: "/images/certificates/dsa-apna-college.png"
+      }
+    ],
+    teams: [
+      {
+        title: "Events Head",
+        date: "2025 - Present",
+        detail: "Leading planning, execution, and team coordination for major events."
+      },
+      {
+        title: "Events Team Member",
+        date: "2024 - 2025",
+        detail: "Supported event logistics, stage flow, and coordination across teams."
+      },
+      {
+        title: "Emcee Team Member",
+        date: "2023 - Present",
+        detail: "Hosted events and maintained audience engagement with clear communication."
+      }
     ]
   },
 
   contact: {
     title: "Get In Touch",
     email: "yastikotak11@gmail.com",
-    linkedin: "#",
-    github: "#"
+    linkedin: "https://www.linkedin.com/in/yasti-kotak-9639152a2/",
+    github: "https://github.com/yastikotak"
   }
 };
